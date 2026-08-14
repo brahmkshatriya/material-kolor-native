@@ -7,6 +7,7 @@ agp = "9.2.1"
 kotlin = "2.4.0"
 compose-multiplatform = "1.11.1"
 compose-material3 = "1.11.0-alpha07"
+compose-native = "1.12.10-alpha06"
 androidx-annotation = "1.10.0"
 binaryCompatibility = "0.18.1"
 dokka = "2.2.0"
@@ -24,15 +25,18 @@ colormath = { module = "com.github.ajalt.colormath:colormath", version.ref = "co
 errorProneAnnotations = { module = "com.google.errorprone:error_prone_annotations", version.ref = "errorProneAnnotations" }
 kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-multiplatform" }
+compose-animation-core = { module = "org.jetbrains.compose.animation:animation-core", version.ref = "compose-multiplatform" }
 compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-multiplatform" }
 compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-multiplatform" }
 compose-ui-test = { module = "org.jetbrains.compose.ui:ui-test", version.ref = "compose-multiplatform" }
 compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-material3" }
+compose-native-material3 = { module = "dev.brahmkshatriya.compose.material3:material3", version.ref = "compose-native" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 compose = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
+compose-native = { id = "dev.brahmkshatriya.compose", version.ref = "compose-native" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 multiplatform-android-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

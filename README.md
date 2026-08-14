@@ -1,7 +1,7 @@
 <img width="500px" src="art/materialkolor-logo.png" alt="logo"/>
 <br />
 
-![Maven Central](https://img.shields.io/maven-central/v/com.materialkolor/material-kolor)
+![Maven Central](https://img.shields.io/maven-central/v/dev.brahmkshatriya.material-kolor/material-kolor)
 [![Kotlin](https://img.shields.io/badge/kotlin-v2.4.0-blue.svg?logo=kotlin)](http://kotlinlang.org)
 [![Build](https://github.com/jordond/materialkolor/actions/workflows/ci.yml/badge.svg)](https://github.com/jordond/materialkolor/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/jordond/MaterialKolor)](https://opensource.org/license/mit/)
@@ -47,6 +47,8 @@ This library is written for Compose Multiplatform, and can be used on the follow
 - Android
 - iOS
 - JVM (Desktop)
+- Linux x64 and ARM64 (Native)
+- Windows x64 (Native)
 - JavaScript/wasm (Browser)
 
 You can see it in action by using [MaterialKolor Builder](https://materialkolor.com).
@@ -75,7 +77,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-              implementation("com.materialkolor:material-kolor:5.0.0")
+              implementation("dev.brahmkshatriya.material-kolor:material-kolor:5.0.0")
             }
         }
     }
@@ -88,7 +90,7 @@ For an Android only project, add the dependency to app level `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-  implementation("com.materialkolor:material-kolor:5.0.0")
+  implementation("dev.brahmkshatriya.material-kolor:material-kolor:5.0.0")
 }
 ```
 
@@ -99,7 +101,7 @@ dependencies {
 materialKolor = "5.0.0"
 
 [libraries]
-materialKolor = { module = "com.materialkolor:material-kolor", version.ref = "materialKolor" }
+materialKolor = { module = "dev.brahmkshatriya.material-kolor:material-kolor", version.ref = "materialKolor" }
 ```
 
 ### Without compose
@@ -114,7 +116,22 @@ Google's [Material Color Utilities](https://github.com/material-foundation/mater
 materialKolor = "5.0.0"
 
 [libraries]
-materialKolor-utilities = { module = "com.materialkolor:material-color-utilities", version.ref = "materialKolor" }
+materialKolor-utilities = { module = "dev.brahmkshatriya.material-kolor:material-color-utilities", version.ref = "materialKolor" }
+```
+
+### Native desktop
+
+Linux x64, Linux ARM64, and Windows x64 use Compose Native `1.12.10-alpha06`. Apply its plugin and
+declare `desktopNative()`:
+
+```kotlin
+plugins {
+    id("dev.brahmkshatriya.compose") version "1.12.10-alpha06"
+}
+
+kotlin {
+    desktopNative()
+}
 ```
 
 ## Usage

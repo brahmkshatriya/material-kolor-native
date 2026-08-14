@@ -5,6 +5,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.multiplatform)
     alias(libs.plugins.multiplatform.android.library)
+    alias(libs.plugins.compose.native)
     alias(libs.plugins.poko)
     alias(libs.plugins.dokka)
     alias(libs.plugins.publish)
@@ -41,6 +42,7 @@ kotlin {
     }
 
     macosArm64()
+    desktopNative()
 
     listOf(
         iosX64(),

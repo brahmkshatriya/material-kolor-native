@@ -1,7 +1,9 @@
 pluginManagement {
     repositories {
+        if (providers.gradleProperty("composeNativeLocal").orNull == "true") {
+            mavenLocal()
+        }
         gradlePluginPortal()
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
         google()
         mavenCentral()
     }
@@ -10,9 +12,11 @@ pluginManagement {
 dependencyResolutionManagement {
     @Suppress("UnstableApiUsage")
     repositories {
+        if (providers.gradleProperty("composeNativeLocal").orNull == "true") {
+            mavenLocal()
+        }
         google()
         mavenCentral()
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
 

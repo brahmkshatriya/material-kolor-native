@@ -4,6 +4,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.multiplatform)
     alias(libs.plugins.compose)
+    alias(libs.plugins.compose.native)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.multiplatform.android.library)
     alias(libs.plugins.dokka)
@@ -47,6 +48,7 @@ kotlin {
     }
 
     macosArm64()
+    desktopNative()
 
     listOf(
         iosArm64(),
@@ -60,6 +62,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(libs.compose.material3)
+            implementation(libs.compose.animation.core)
             implementation(libs.compose.foundation)
             implementation(libs.compose.runtime)
             implementation(libs.compose.ui)
@@ -68,13 +71,17 @@ kotlin {
             api(project(":material-color-utilities"))
         }
 
+        desktopNativeMain.dependencies {
+            implementation(libs.compose.native.material3)
+        }
+
         commonTest.dependencies {
             implementation(kotlin("test"))
-            implementation(libs.compose.ui.test)
         }
 
         jvmTest.dependencies {
             implementation(compose.desktop.currentOs)
+            implementation(libs.compose.ui.test)
         }
     }
 
