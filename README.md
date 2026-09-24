@@ -2,9 +2,9 @@
 <br />
 
 ![Maven Central](https://img.shields.io/maven-central/v/dev.brahmkshatriya.material-kolor/material-kolor)
-[![Kotlin](https://img.shields.io/badge/kotlin-v2.4.0-blue.svg?logo=kotlin)](http://kotlinlang.org)
-[![Build](https://github.com/jordond/materialkolor/actions/workflows/ci.yml/badge.svg)](https://github.com/jordond/materialkolor/actions/workflows/ci.yml)
-[![License](https://img.shields.io/github/license/jordond/MaterialKolor)](https://opensource.org/license/mit/)
+[![Kotlin](https://img.shields.io/badge/kotlin-v2.4.10-blue.svg?logo=kotlin)](http://kotlinlang.org)
+[![Build](https://github.com/brahmkshatriya/material-kolor-native/actions/workflows/ci.yml/badge.svg)](https://github.com/brahmkshatriya/material-kolor-native/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/brahmkshatriya/material-kolor-native)](https://opensource.org/license/mit/)
 
 [![Compose Multiplatform](https://img.shields.io/badge/Compose%20Multiplatform-1.9.1-blue)](https://github.com/JetBrains/compose-multiplatform)
 ![badge-android](http://img.shields.io/badge/platform-android-6EDB8D.svg?style=flat)
@@ -47,8 +47,6 @@ This library is written for Compose Multiplatform, and can be used on the follow
 - Android
 - iOS
 - JVM (Desktop)
-- Linux x64 and ARM64 (Native)
-- Windows x64 (Native)
 - JavaScript/wasm (Browser)
 
 You can see it in action by using [MaterialKolor Builder](https://materialkolor.com).
@@ -117,21 +115,6 @@ materialKolor = "5.0.1"
 
 [libraries]
 materialKolor-utilities = { module = "dev.brahmkshatriya.material-kolor:material-color-utilities", version.ref = "materialKolor" }
-```
-
-### Native desktop
-
-Linux x64, Linux ARM64, and Windows x64 use Compose Native `1.12.10-alpha06`. Apply its plugin and
-declare `desktopNative()`:
-
-```kotlin
-plugins {
-    id("dev.brahmkshatriya.compose") version "1.12.10-alpha06"
-}
-
-kotlin {
-    desktopNative()
-}
 ```
 
 ## Usage

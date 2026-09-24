@@ -19,7 +19,7 @@ kotlin {
     @Suppress("UnstableApiUsage")
     android {
         compileSdk = libs.versions.sdk.compile.get().toInt()
-        minSdk = libs.versions.sdk.min.get().toInt()
+        minSdk = libs.versions.sdk.min.library.get().toInt()
         namespace = "com.materialkolor"
 
         optimization {
@@ -47,6 +47,7 @@ kotlin {
         browser()
     }
 
+    macosX64()
     macosArm64()
     desktopNative()
 
@@ -61,8 +62,9 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            implementation(libs.compose.material3)
-            implementation(libs.compose.animation.core)
+            implementation(libs.compose.material3.get().toString()) {
+                exclude(group = "androidx.compose.material3")
+            }
             implementation(libs.compose.foundation)
             implementation(libs.compose.runtime)
             implementation(libs.compose.ui)
@@ -71,17 +73,21 @@ kotlin {
             api(project(":material-color-utilities"))
         }
 
+        androidMain.dependencies {
+            compileOnly(libs.androidx.compose.material3)
+        }
+
         desktopNativeMain.dependencies {
             implementation(libs.compose.native.material3)
         }
 
         commonTest.dependencies {
             implementation(kotlin("test"))
+            implementation(libs.compose.ui.test)
         }
 
         jvmTest.dependencies {
             implementation(compose.desktop.currentOs)
-            implementation(libs.compose.ui.test)
         }
     }
 

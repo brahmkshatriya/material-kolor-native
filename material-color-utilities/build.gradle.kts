@@ -16,10 +16,9 @@ kotlin {
 
     applyDefaultHierarchyTemplate()
 
-    @Suppress("UnstableApiUsage")
     android {
         compileSdk = libs.versions.sdk.compile.get().toInt()
-        minSdk = libs.versions.sdk.min.get().toInt()
+        minSdk = libs.versions.sdk.min.library.get().toInt()
         namespace = "com.materialkolor.colorutilities"
 
         compilerOptions {
@@ -41,13 +40,14 @@ kotlin {
         browser()
     }
 
+    macosX64()
     macosArm64()
     desktopNative()
 
     listOf(
         iosX64(),
         iosArm64(),
-        iosSimulatorArm64()
+        iosSimulatorArm64(),
     ).forEach { target ->
         target.binaries.framework {
             baseName = "material-color-utilities"
