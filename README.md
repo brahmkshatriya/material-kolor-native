@@ -2,7 +2,7 @@
 <br />
 
 ![Maven Central](https://img.shields.io/maven-central/v/dev.brahmkshatriya.material-kolor/material-kolor)
-[![Kotlin](https://img.shields.io/badge/kotlin-v2.4.10-blue.svg?logo=kotlin)](http://kotlinlang.org)
+[![Kotlin](https://img.shields.io/badge/kotlin-v2.4.20-blue.svg?logo=kotlin)](http://kotlinlang.org)
 [![Build](https://github.com/brahmkshatriya/material-kolor-native/actions/workflows/ci.yml/badge.svg)](https://github.com/brahmkshatriya/material-kolor-native/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/brahmkshatriya/material-kolor-native)](https://opensource.org/license/mit/)
 
@@ -75,7 +75,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-              implementation("dev.brahmkshatriya.material-kolor:material-kolor:5.0.1")
+              implementation("dev.brahmkshatriya.material-kolor:material-kolor:5.0.2")
             }
         }
     }
@@ -88,7 +88,7 @@ For an Android only project, add the dependency to app level `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-  implementation("dev.brahmkshatriya.material-kolor:material-kolor:5.0.1")
+  implementation("dev.brahmkshatriya.material-kolor:material-kolor:5.0.2")
 }
 ```
 
@@ -96,7 +96,7 @@ dependencies {
 
 ```toml
 [versions]
-materialKolor = "5.0.1"
+materialKolor = "5.0.2"
 
 [libraries]
 materialKolor = { module = "dev.brahmkshatriya.material-kolor:material-kolor", version.ref = "materialKolor" }
@@ -111,7 +111,7 @@ Google's [Material Color Utilities](https://github.com/material-foundation/mater
 
 ```toml
 [versions]
-materialKolor = "5.0.1"
+materialKolor = "5.0.2"
 
 [libraries]
 materialKolor-utilities = { module = "dev.brahmkshatriya.material-kolor:material-color-utilities", version.ref = "materialKolor" }
