@@ -10,9 +10,9 @@ app-code = "103"
 ############################
 agp = "9.4.1"
 kotlin = "2.4.20"
-compose-multiplatform = "1.12.0"
-compose-native = "1.13.0-alpha03"
-compose-material3 = "1.12.0-SNAPSHOT+v-mazunin-enable-lifecycle-and-nav3-for-1-12-0-alpha02"
+compose-multiplatform = "1.13.0-alpha01"
+compose-native = "1.13.0-alpha05"
+compose-material3 = "1.13.0-alpha01"
 androidx-annotation = "1.10.0"
 androidx-material3 = "1.5.0-alpha28"
 binaryCompatibility = "0.18.2"
@@ -30,7 +30,6 @@ androidx-core = "1.19.0"
 androidx-lifecycle = "2.11.0"
 calfFilePicker = "0.14.0"
 highlights = "1.1.0"
-compose-windowSizeClass = "1.12.0-SNAPSHOT+v-mazunin-enable-lifecycle-and-nav3-for-1-12-0-alpha02"
 compose-hot-reload = "1.2.0"
 kotlinx-coroutines = "1.11.0"
 kotlinx-datetime = "0.8.0-0.6.x-compat"
@@ -40,7 +39,6 @@ kstore = "1.1.0"
 kermit = "2.2.0"
 ktor = "3.6.0"
 material3-adaptive = "1.2.0"
-material3-adaptive-suite = "1.12.0-SNAPSHOT+v-mazunin-enable-lifecycle-and-nav3-for-1-12-0-alpha02"
 materialIconsExtended = "1.7.3"
 materialKolor = "5.0.1"
 composeIcons = "1.1.1"
@@ -92,8 +90,8 @@ material-icons-extended = { module = "org.jetbrains.compose.material:material-ic
 material3-adaptive = { module = "org.jetbrains.compose.material3.adaptive:adaptive", version.ref = "material3-adaptive" }
 material3-adaptive-layout = { module = "org.jetbrains.compose.material3.adaptive:adaptive-layout", version.ref = "material3-adaptive" }
 material3-adaptive-navigation = { module = "org.jetbrains.compose.material3.adaptive:adaptive-navigation", version.ref = "material3-adaptive" }
-material3-adaptive-navigation-suite = { module = "org.jetbrains.compose.material3:material3-adaptive-navigation-suite", version.ref = "material3-adaptive-suite" }
-material3-windowSizeClass = { module = "org.jetbrains.compose.material3:material3-window-size-class", version.ref = "compose-windowSizeClass" }
+material3-adaptive-navigation-suite = { module = "org.jetbrains.compose.material3:material3-adaptive-navigation-suite", version.ref = "compose-material3" }
+material3-windowSizeClass = { module = "org.jetbrains.compose.material3:material3-window-size-class", version.ref = "compose-material3" }
 materialKolor = { module = "com.materialkolor:material-kolor", version.ref = "materialKolor" }
 materialKolor-utilities = { module = "com.materialkolor:material-color-utilities", version.ref = "materialKolor" }
 stateHolder = { module = "dev.jordond.stateholder:core", version.ref = "stateHolder" }
